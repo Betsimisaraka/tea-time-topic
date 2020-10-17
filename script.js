@@ -11,9 +11,11 @@ async function fectchTopics() {
     const response = await fetch(endtoint);
     const data = await response.json();
     topics = data;
+    return topics;
 }
 
 async function displayTopics() {
+    const topics = await fectchTopics();
     const sortedDate = topics.sort((a, b) => b.discussedOn - a.discussedOn);
     const html = sortedDate.map(topic => {
         if (topic.discussedOn === "") {
@@ -107,21 +109,21 @@ function handleClick(e) {
 
 function upvotesBtn(idToUp) {
     console.log(idToUp, 'upvotes');
-    const topic = topics.find(topic => topic.id == idToUp)
+    const topic = topics.find(topic => topic.id === idToUp)
     topic.upvotes++;
     container.dispatchEvent(new CustomEvent('storeTopics'));
 }
 
 function downvoteBtn(idToUp) {
     console.log(idToUp, 'downvotes');
-    const topic = topics.find(topic => topic.id == idToUp)
+    const topic = topics.find(topic => topic.id === idToUp)
     topic.downvotes++;
     container.dispatchEvent(new CustomEvent('storeTopics'));
 }
 
 function deleteTopic(idTodelete) {
     console.log(idTodelete, 'deleted');
-    topics = topics.filter(topic => topic.id != idTodelete);
+    topics = topics.filter(topic => topic.id !== idTodelete);
     container.dispatchEvent(new CustomEvent('storeTopics'));
 }
 
@@ -131,4 +133,4 @@ container.addEventListener('storeTopics', updateLocalStorage);
 container.addEventListener('click', handleClick);
 
 displayTopics()
-// initLocalStorage();
+initLocalStorage();
