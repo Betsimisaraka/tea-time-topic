@@ -64,7 +64,16 @@ form, input[type="text"], .submit, section ul li {
 
 form, section ul li {
     background-color: #FFFFFF;
+    position: relative;
+    padding-left: 48px;
+    padding-right: 48px;
+    padding-top: 30px;
+    padding-bottom: 12px;
 } 
+
+form, section ul li + li {
+    margin-top: 1rem;
+}
 
 fieldset {
     border: none;
@@ -84,4 +93,48 @@ input[type="text"] {
     line-height: 14px;
     color: #00473E;
     cursor: pointer;
+}
+
+.delete, .archive, .upvotes, .downvotes {
+    background-size: 2rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+}
+
+.delete {
+    background-image: url(./assets/delete.svg);
+}
+
+
+.archive, .delete {
+    position: absolute;
+    top: 5%;
+    left: 92%;
+}
+
+.archive {
+    background-image: url(./assets/archive.svg);
+}
+
+.upvotes {
+    background-image: url(./assets/upvotes.svg);
+}
+
+.downvotes {
+    background-image: url(./assets/downvotes.svg);
+}
+
+.discussed {
+    text-align: center;
+}
+
+.up_down_votes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
