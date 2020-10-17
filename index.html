@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tea Time Topic</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
@@ -12,25 +13,28 @@
         <h1>Tea Time Topic</h1>
     </Header>
     <main>
-        <section>
-            <form action="">
-                <fieldset>
-                    <label for="teatopic"></label>
-                    <input type="text" id="teatopic" name="teatopic">
-                </fieldset>
-                <button type="submit">Submit</button>
-            </form>
-        </section>
-        <section class="dispalyTopics">
-            <div>
-                <h2>Next topics</h2>
-                <ul class="next_topic"></ul>
-            </div>
-            <div>
-                <h2>Past topics</h2>
-                <ul class="past_topics"></ul>
-            </div>
-        </section>
+        <div class="container">
+            <section>
+                <h2>Add a Topic</h2>
+                <form action="">
+                    <fieldset>
+                        <label for="teatopic"></label>
+                        <input type="text" id="teatopic" name="teatopic" placeholder="Whrite your topic here">
+                    </fieldset>
+                    <button class="submit" type="submit">Submit</button>
+                </form>
+            </section>
+            <section class="dispalyTopics">
+                <div>
+                    <h2>Next topics</h2>
+                    <ul class="next_topic"></ul>
+                </div>
+                <div>
+                    <h2>Past topics</h2>
+                    <ul class="past_topics"></ul>
+                </div>
+            </section>
+        </div>
     </main>
     <script src="./script.js"></script>
 </body>

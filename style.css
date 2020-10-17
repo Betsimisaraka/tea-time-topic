@@ -1,9 +1,87 @@
 html {
-    font-family: "Roboto" sans-serif;
+    font-family: 'Roboto' sans-serif;
     font-size: 1rem;
+    font-style: normal;
+    font-weight: normal;
 }
 
 body {
+    background: #E5E5E5;
+}
+
+body, h1, h2, h3, section ul {
     margin: 0;
     padding: 0;
+}
+
+h1 {
+    font-size: 64px;
+    line-height: 75px;
+    color: #00473E;
+    text-align: center;
+} 
+
+h2 {
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #00473E;
+    padding-bottom: 10px;
+    padding-top: 50px;
+}
+
+h3 {
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    color: #00473E;
+}
+
+.container {
+    max-width: 581px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section ul {
+    list-style: none;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    padding-left: 27px;
+    padding-right: 27px;
+    padding-top: 23px;
+    padding-bottom: 23px;
+}
+
+form, input[type="text"], .submit, section ul li {
+    border-radius: 5px;
+    border: none;
+}
+
+form, section ul li {
+    background-color: #FFFFFF;
+} 
+
+fieldset {
+    border: none;
+}
+
+input[type="text"] {
+    background: #F2F7F5;
+    padding: 1rem 10rem 1rem 1rem;
+    margin-right: 27px;
+}
+
+.submit {
+    background: #FAAE2C;
+    padding: 16px 23px 16px 23px;
+    align-self: center;
+    font-size: 12px;
+    line-height: 14px;
+    color: #00473E;
+    cursor: pointer;
 }

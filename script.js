@@ -22,7 +22,7 @@ async function displayTopics() {
             const html =
              `
                 <li data-id=${topic.id}>
-                    <p>${topic.title}</p>
+                    <h3>${topic.title}</h3>
                     <p>${topic.upvotes}</p>
                     <p>${topic.downvotes}</p>
                 </li>
@@ -34,7 +34,7 @@ async function displayTopics() {
             const html =
              `
                 <li data-id=${topic.id}>
-                    <p>${topic.title}</p>
+                    <h3>${topic.title}</h3>
                     <p>${topic.discussedOn}</p>
                     <p>${topic.upvotes}</p>
                     <p>${topic.downvotes}</p>
@@ -69,6 +69,7 @@ function handleSubmit(e) {
     const topicTitle = form.teatopic.value;
 
     const newTopic = {
+        discussedOn: "",
         tille: topicTitle,
         id: Date.now(),
         downvotes: 0,
